@@ -4,7 +4,7 @@ from os.path import expanduser
 
 
 
-NexusGroup="com.msxf.eyas"
+NexusGroup="com.winter.eyas"
 GradleFolder=""
 SYSTEM="unix"
 
@@ -87,8 +87,8 @@ for snapshotDict in snapshotDicts:
   -Dversion=" + snapshotDict["version"] + " \
   -Dpackaging=jar  \
   -Dfile="+ snapshotDict["deployFile"] + " \
-  -DrepositoryId=msxw-snapshot \
-  -Durl=http://localhost:8081/nexus/content/repositories/msxw-snapshot/ "
+  -DrepositoryId=winter-snapshot \
+  -Durl=http://localhost:8081/nexus/content/repositories/winter-snapshot/ "
 	os.system(mavenCommand)
 
 print("\n*************\n")
@@ -100,6 +100,6 @@ for releaseDict in releaseDicts:
   -Dversion=" + releaseDict["version"] + " \
   -Dpackaging=jar  \
   -Dfile="+ releaseDict["deployFile"] + " \
-  -DrepositoryId=msxw-release \
-  -Durl=http://localhost:8081/nexus/content/repositories/msxw-release/ "
+  -DrepositoryId=winter-release \
+  -Durl=http://localhost:8081/nexus/content/repositories/winter-release/ "
 	os.system(mavenCommand)	
